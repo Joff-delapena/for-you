@@ -252,15 +252,19 @@
     var stickers=document.createElement('div');stickers.className='letter-stickers';
     stickers.setAttribute('aria-hidden','true');
     stickers.textContent='🌷  🐰  ✿  💌  🦋  ♡  🌼';
+    var eyebrow=document.createElement('p');eyebrow.className='page-eyebrow';eyebrow.textContent='OUR STORY · ALWAYS';
     var title=document.createElement('h2');title.id='mtitle';title.textContent='A little note for you, Lalang 💌🌷';
+    var subtitle=document.createElement('p');subtitle.className='letter-subtitle';subtitle.textContent='Para sa akong Lang, with all my love 💗';
     var note=document.createElement('div');note.className='love-note';
     messageParts.forEach(function(text,index){
       var paragraph=document.createElement('p');
       paragraph.className='letter-paragraph';
       paragraph.textContent=text;
-      paragraph.setAttribute('data-sticker',['🌷','💌','🐰','💗','🌼','🦋','🧸','💕'][index]);
+      paragraph.setAttribute('data-sticker',['🌷','💌','🐰','💗','🌼','🦋','🧸','💕','💗'][index]);
       note.appendChild(paragraph);
     });
+    var closing=document.createElement('p');closing.className='letter-closing';
+    closing.textContent='Forever your person, always choosing you 💞';
     var stickerFooter=document.createElement('div');stickerFooter.className='letter-sticker-footer';
     stickerFooter.setAttribute('aria-hidden','true');stickerFooter.textContent='💗 🌷 💋 🌼 💌 🐰 💕';
     var pageNumber=document.createElement('span');pageNumber.className='page-number';
