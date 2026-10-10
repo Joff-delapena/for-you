@@ -226,7 +226,8 @@
     var caption=document.createElement('p');caption.className='gift-caption';caption.textContent='A little flower that blooms just for you 🌷';
     content.appendChild(title);content.appendChild(stage);content.appendChild(caption);
     var slideshow=document.createElement('div');slideshow.className='photo-slideshow';slideshow.setAttribute('aria-label','Slideshow of our photos');
-    var photoPaths=['/photos/our-photo-1.jpg','/photos/our-photo-2.jpg','/photos/our-photo-3.jpg','/photos/our-photo-4.jpg'];
+    var photoBase=location.protocol==='file:'?'./public/photos/':'/photos/';
+    var photoPaths=[photoBase+'our-photo-1.jpg',photoBase+'our-photo-2.jpg',photoBase+'our-photo-3.jpg',photoBase+'our-photo-4.jpg'];
     var frames=[];
     photoPaths.forEach(function(path,index){
       var frame=document.createElement('div');frame.className='slideshow-frame';
