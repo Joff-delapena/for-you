@@ -182,12 +182,15 @@
   no.addEventListener('keydown',function(e){e.preventDefault();dodge(e)});
 
   var favoriteMusic=$('favoriteMusic'),musicToggle=$('musicToggle');
+  if(location.protocol==='file:'){
+    favoriteMusic.src='./public/music/her-favorite-song.mp3';
+  }
   var musicStatus=$('musicStatus');
   musicToggle.addEventListener('click',function(){
     if(favoriteMusic.paused){
       favoriteMusic.play().then(function(){
         musicToggle.textContent='Open Now ❚❚';musicStatus.textContent='Her song is playing 💗';
-      }).catch(function(){musicStatus.textContent='The song could not start. Check the audio file path.'});
+      }).catch(function(error){musicStatus.textContent='The song could not start: '+error.message});
     }else{
       favoriteMusic.pause();musicToggle.textContent='Click here before you open my surprise ♪';musicStatus.textContent='Song paused.';
     }
