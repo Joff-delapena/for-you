@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Anniversary 💌</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section class="pin-gate" id="pinGate" aria-labelledby="pinTitle">
+  <form class="pin-card" id="pinForm">
+    <div class="gate-stickers" aria-hidden="true"><span>🌷</span><span>🐰</span><span>💗</span></div>
+    <h1 id="pinTitle">Di ko nimo uyab kung di nimo ma open</h1>
+    <input id="anniversaryPin" class="pin-input" type="password" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="off" aria-label="Six-digit monthsary code" aria-describedby="pinError" placeholder="••••••" required>
+    <button class="b" type="submit">Unlock 💖</button>
+    <p class="pin-error" id="pinError" aria-live="polite"></p>
+    <p class="pin-tease">TARONGA GID NA 😜</p>
+  </form>
+</section>
+
+<div class="garden-strip" aria-hidden="true">
+  <div class="bunny bunny-left">
+    <span class="ear left"></span>
+    <span class="ear right"></span>
+    <span class="head">
+      <span class="face">
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="nose"></span>
+      </span>
+    </span>
+    <span class="body"></span>
+    <span class="paw left"></span>
+    <span class="paw right"></span>
+    <span class="tail"></span>
+  </div>
+
+  <div class="bunny bunny-right">
+    <span class="ear left"></span>
+    <span class="ear right"></span>
+    <span class="head">
+      <span class="face">
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="nose"></span>
+      </span>
+    </span>
+    <span class="body"></span>
+    <span class="paw left"></span>
+    <span class="paw right"></span>
+    <span class="tail"></span>
+  </div>
+</div>
+
+<section class="gate" id="gate" hidden>
+  <div class="gwrap gate-card">
+    <div class="gate-stickers" aria-hidden="true"><span>💌</span><span>🌼</span><span>🐰</span></div>
+    <p class="gate-kicker">ONE TINY QUESTION ·</p>
+    <div class="gemoji" aria-hidden="true">🥺</div>
+    <h1>Before you open this…</h1>
+    <h2>Do you still love me? (ayaw gid pag no)</h2>
+    <div class="btns" id="btns">
+      <button class="b" id="yes">Yes 💖</button>
+      <button class="b no" id="no">No</button>
+    </div>
+    <p class="reply" id="reply" aria-live="polite">Choose wisely.</p>
+  </div>
+</section>
+
+<main id="main" hidden>
+  <section class="gifts">
+    <div class="panel">
+      <div class="sticker-garland" aria-hidden="true">
+        <span>🌷</span><span>🐰</span><span>💗</span><span>🌼</span><span>🧸</span><span>💌</span><span>🦋</span>
+      </div>
+      <p class="scrapbook-kicker">OUR LITTLE LOVEBOOK ·</p>
+      <h1 class="ptitle">Two years, still you</h1>
+      <span class="psub">A little collection of my favorite things: us 💗</span>
+      <div class="music-control">
+        <button class="b" id="musicToggle" type="button" hidden>Play ♪</button>
+        <p class="gift-status" id="musicStatus" aria-live="polite"></p>
+      </div>
+      <p class="gift-instructions">Tap a little scrapbook card to open your surprise ✨</p>
+      <div class="tiles">
+        <button class="tile" data-g="flower" aria-label="Open the blooming flower and our photo slideshow">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M50 54V32" stroke="#4fae7f" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="38" cy="42" rx="8" ry="4" fill="#6fcf9d" transform="rotate(-30 38 42)"/>
+            <ellipse cx="64" cy="42" rx="8" ry="4" fill="#6fcf9d" transform="rotate(30 64 42)"/>
+            <path d="M42 30Q42 12 50 10Q58 12 58 30Q50 37 42 30Z" fill="#ff8fb5"/>
+            <g fill="#8fb4ff"><circle cx="27" cy="38" r="5"/><circle cx="35" cy="32" r="5"/><circle cx="19" cy="32" r="5"/><circle cx="23" cy="25" r="5"/><circle cx="31" cy="25" r="5"/></g>
+            <circle cx="27" cy="31" r="3.4" fill="#ffd86b"/>
+            <path d="M22 54Q50 46 78 54L71 92Q50 98 29 92Z" fill="#fff"/>
+            <path d="M31 70Q50 77 69 70" stroke="#f4a3c1" stroke-width="3" fill="none"/>
+            <path d="M50 76l-7-5 3 9zM50 76l7-5-3 9z" fill="#ff8fb5"/>
+            <path d="M82 20l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#ffd86b"/>
+          </svg><span class="tile-caption">Our flower & memories</span><span class="tile-tape" aria-hidden="true"></span><span class="ok">✓</span>
+        </button>
+        <button class="tile" data-g="letter" aria-label="Open my love note">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <rect x="12" y="36" width="76" height="48" rx="6" fill="#fff"/>
+            <path d="M12 40L50 66L88 40" stroke="#f4a3c1" stroke-width="3" fill="none" stroke-linejoin="round"/>
+            <path d="M50 58c-5-4-8-6-8-9a4.5 4.5 0 0 1 8-2a4.5 4.5 0 0 1 8 2c0 3-3 5-8 9z" fill="#ff5c8a" transform="translate(0 6)"/>
+            <path d="M84 30V18" stroke="#4fae7f" stroke-width="3" stroke-linecap="round"/>
+            <g fill="#8fb4ff"><circle cx="72" cy="30" r="5"/><circle cx="79" cy="24" r="5"/><circle cx="66" cy="24" r="5"/><circle cx="70" cy="17" r="5"/><circle cx="77" cy="17" r="5"/></g>
+            <circle cx="72" cy="23" r="3.2" fill="#ffd86b"/>
+            <ellipse cx="88" cy="36" rx="8" ry="3.5" fill="#6fcf9d" transform="rotate(-25 88 36)"/>
+            <ellipse cx="60" cy="36" rx="8" ry="3.5" fill="#6fcf9d" transform="rotate(20 60 36)"/>
+          </svg><span class="tile-caption">A note for you</span><span class="tile-tape" aria-hidden="true"></span><span class="ok">✓</span>
+        </button>
+      </div>
+      <p class="final" id="final" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<!-- Add her song as public/music/her-favorite-song.mp3, or change this path. -->
+<audio id="favoriteMusic" src="/music/her-favorite-song.mp3" loop preload="none"></audio>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mtitle">
+  <div class="sheet"><button class="x" id="close" aria-label="Close gift">✕</button><div id="mbody"></div></div>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var yes=$('yes'), no=$('no'), gate=$('gate'), main=$('main'), dodges=0;
+  var pinForm=$('pinForm'),pinInput=$('anniversaryPin'),pinGate=$('pinGate');
+
+  pinForm.addEventListener('submit',function(event){
+    event.preventDefault();
+    if(pinInput.value==='101124'){
+      pinGate.hidden=true;
+      gate.hidden=false;
+      $('pinError').textContent='';
+      yes.focus();
+      return;
+    }
+    $('pinError').textContent='Wrong 🥺 Diko nimo love.';
+    pinInput.value='';
+    pinInput.focus();
+  });
+
+  function hearts(n,x,y){
+    if(reduce)return;
+    var set=['💖','💛','✨','💕','🌸','🥂'];
+    for(var i=0;i<n;i++){
+      var e=document.createElement('span');e.className='fly';
+      e.textContent=set[Math.floor(Math.random()*set.length)];
+      e.style.left=(x+(Math.random()*120-60))+'px';e.style.top=y+'px';
+      e.style.setProperty('--dx',(Math.random()*160-80)+'px');
+      e.style.setProperty('--r',(Math.random()*80-40)+'deg');
+      e.style.animationDelay=(Math.random()*.4)+'s';
+      document.body.appendChild(e);
+      setTimeout(function(el){el.remove()},3000,e);
+    }
+  }
+
+  /* gate: No can't be caught */
+  var lines=['Nope','Ayaw na lagig no 🥺','Nice try 😏','Pag yes nalang lagi 🥺','Diman pakasabot oi','Mag yes nana siya yieee 💖'];
+  var talk=['Choose wisely.','The "No" button seems shy…','It\'s broken. Sorry. (Not sorry.)','Only one button works here. 👀','Plot twist: it was always "Yes".'];
+  function dodge(e){
+    if(e&&e.preventDefault)e.preventDefault();
+    dodges++;
+    var card=document.querySelector('.gate-card').getBoundingClientRect();
+    var bw=no.offsetWidth||90,bh=no.offsetHeight||48,yr=yes.getBoundingClientRect(),x,y,t=0;
+    var minX=card.left+14,maxX=Math.max(minX,card.right-bw-14);
+    var minY=card.top+14,maxY=Math.max(minY,card.bottom-bh-14);
+    do{
+      x=minX+Math.random()*(maxX-minX);
+      y=minY+Math.random()*(maxY-minY);
+      t++;
+    }while(t<20&&x<yr.right+12&&x+bw>yr.left-12&&y<yr.bottom+12&&y+bh>yr.top-12);
+    no.classList.add('run');no.style.left=x+'px';no.style.top=y+'px';
+    no.textContent=lines[dodges%lines.length];
+    $('reply').textContent=talk[Math.min(Math.floor(dodges/2),talk.length-1)];
+    if(document.activeElement===no)no.blur();
+  }
+  ['pointerenter','pointerdown','touchstart','mousedown','focus','click'].forEach(function(ev){
+    no.addEventListener(ev,dodge,{passive:false});
+  });
+  no.addEventListener('keydown',function(e){e.preventDefault();dodge(e)});
+
+  var favoriteMusic=$('favoriteMusic'),musicToggle=$('musicToggle');
+  var musicStatus=$('musicStatus');
+  musicToggle.addEventListener('click',function(){
+    if(favoriteMusic.paused){
+      favoriteMusic.play().then(function(){
+        musicToggle.textContent='Open Now ❚❚';musicStatus.textContent='Her song is playing 💗';
+      }).catch(function(){musicStatus.textContent='The song could not start. Check the audio file path.'});
+    }else{
+      favoriteMusic.pause();musicToggle.textContent='Click here before you open my surprise ♪';musicStatus.textContent='Song paused.';
+    }
+  });
+  yes.addEventListener('click',function(e){ 
+    musicToggle.hidden=false;
+    musicToggle.textContent='Click here before you open my surprise ♪';
+    $('reply').textContent='I knew it! 💖';
+    no.style.display='none';
+    hearts(24,e.clientX||innerWidth/2,e.clientY||innerHeight/2);
+    gate.classList.add('out');
+    setTimeout(function(){gate.hidden=true;main.hidden=false;scrollTo(0,0)},reduce?0:700);
+  });
+
+  var opened={},last=null,modal=$('modal'),slideshowTimer=null;
+  var messageParts=[
+    'Happy 2nd anniversary, Lang! Grabe no, two years na ta. Usahay makahuna-huna ko kung unsa na kadaghan ang atong naagian, ug proud kaayo ko nato kay ania gihapon ta, padayon nga nagmahalay ug nagpilianay.',
+    'Kabalo ko nga dili sayon ang LDR. Naay mga adlaw nga mingawon kaayo ko nimo ug gusto lang unta ko nga naa ko diha, makig-uban nimo ug mohatag og hug. Bisan layo ta, importante kaayo ka sa akoa. Ang distansya dili makapagamay sa akong gugma para nimo.',
+    'Thank you kaayo sa imong pagsabot, pasensya, ug sa pagpabilin sa akong kiliran. Thankful kaayo ko nga naa ka sa akong kinabuhi, Lang. Salamat kay dawaton ug sabton ko nimo bisan usahay lisod ko sabton.',
+    'Sorry kung usahay ako ang hinungdan sa imong bad mood, kung mapasuko tika, o kung dili ko makapakita sa akong gugma sa paagi nga angay nimo madawat. Dili ko perpekto, pero gusto ko nga magpadayon ko og paningkamot nga mahimong mas maayo para sa ato.',
+    'Ayaw kalimot kung unsa ka ka-importante ug ka-special sa akoa. Proud ko nimo ug sa tanan nimong paningkamot. Kung kapoy ka, pahulay lang sa—dili kinahanglan nga kaya nimo ang tanan dayon. Naa ra ko diri, mosuporta ug motuo nimo.',
+    'Pasensya na nga dili pa ko maka-anha diha karon. Hulat lang ta sa sakto nga panahon, ha? Unta puhon magkuyog na ta, ug dili na kinahanglan mag-ihap sa mga adlaw nga layo ta. Maabot ra gyud ta ana nga panahon.',
+    'Sa pagkakaron, magpabilin lang ta nga lig-on, magtinabangay, ug magpadayon sa pagpili sa usag usa. Bisan LDR, usa ra gihapon ta ka team. Love kaayo tika, Lang, ug dili ko kapoyan og remind nimo ana.',
+    'Mao ra ni akong gift karon, pero gikan gyud ni sa pinakasinsero nga parte sa akong heart. Salamat sa atong duha ka tuig, sa imong gugma, ug sa paglaom sa atong kaugmaon. I love you so, so much. Stay strong ta para sa ato. Mwa mwa mwa! 💗'
+  ];
+
+  function renderFlower(){
+    var content=document.createElement('div');content.className='flower-gift';
+    var title=document.createElement('h2');title.id='mtitle';title.textContent='A flower for you, Lalang 🌷';
+    var stage=document.createElement('div');stage.className='flower-stage';stage.setAttribute('aria-hidden','true');
+    stage.innerHTML='<svg class="gift-flower" viewBox="0 0 220 260"><path class="flower-stem" d="M110 225C110 180 112 140 110 92"/><path class="flower-leaf" d="M108 180C67 154 54 176 106 194"/><path class="flower-leaf flower-leaf-right" d="M111 160C151 132 171 151 114 177"/><g class="flower-head"><ellipse class="petal petal-a" cx="110" cy="66" rx="23" ry="43"/><ellipse class="petal petal-b" cx="110" cy="66" rx="23" ry="43"/><ellipse class="petal petal-c" cx="110" cy="66" rx="23" ry="43"/><ellipse class="petal petal-d" cx="110" cy="66" rx="23" ry="43"/><circle class="flower-center" cx="110" cy="67" r="19"/></g></svg><span class="flower-sparkle sparkle-one">✦</span><span class="flower-sparkle sparkle-two">✧</span><span class="flower-sparkle sparkle-three">♥</span>';
+    var caption=document.createElement('p');caption.className='gift-caption';caption.textContent='A little flower that blooms just for you 🌷';
+    content.appendChild(title);content.appendChild(stage);content.appendChild(caption);
+    var slideshow=document.createElement('div');slideshow.className='photo-slideshow';slideshow.setAttribute('aria-label','Slideshow of our photos');
+    var photoPaths=['/photos/our-photo-1.jpg','/photos/our-photo-2.jpg','/photos/our-photo-3.jpg','/photos/our-photo-4.jpg'];
+    var frames=[];
+    photoPaths.forEach(function(path,index){
+      var frame=document.createElement('div');frame.className='slideshow-frame';
+      var placeholder=document.createElement('div');placeholder.className='photo-placeholder';
+      placeholder.innerHTML='<span aria-hidden="true">🌷💗</span><small>Add photo '+(index+1)+'</small>';
+      var image=document.createElement('img');image.className='slideshow-photo';image.src=path;
+      image.alt='Our memory '+(index+1);
+      image.addEventListener('load',function(){placeholder.hidden=true});
+      image.addEventListener('error',function(){image.hidden=true});
+      frame.appendChild(placeholder);frame.appendChild(image);
+      slideshow.appendChild(frame);frames.push(frame);
+    });
+    var current=0;
+    function showNextPhoto(){
+      frames.forEach(function(frame,index){frame.classList.toggle('active',index===current)});
+      current=(current+1)%frames.length;
+    }
+    showNextPhoto();
+    content.appendChild(slideshow);
+    content._slideshowTimer=setInterval(showNextPhoto,3000);
+    return content;
+  }
+
+  function renderMessage(){
+    var content=document.createElement('div');content.className='letter-gift';
+    var stickers=document.createElement('div');stickers.className='letter-stickers';
+    stickers.setAttribute('aria-hidden','true');
+    stickers.textContent='🌷  🐰  ✿  💌  🦋  ♡  🌼';
+    var eyebrow=document.createElement('p');eyebrow.className='page-eyebrow';eyebrow.textContent='OUR STORY · ALWAYS';
+    var title=document.createElement('h2');title.id='mtitle';title.textContent='A little note for you, Lalang 💌';
+    var subtitle=document.createElement('p');subtitle.className='letter-subtitle';subtitle.textContent='Para sa akong Lang, with all my love 💗';
+    var note=document.createElement('div');note.className='love-note';
+    messageParts.forEach(function(text,index){
+      var paragraph=document.createElement('p');
+      paragraph.className='letter-paragraph';
+      paragraph.textContent=text;
+      paragraph.setAttribute('data-sticker',['🌷','💌','🐰','💗','🌼','🦋','🧸','💕'][index]);
+      note.appendChild(paragraph);
+    });
+    var closing=document.createElement('p');closing.className='letter-closing';
+    closing.textContent='Forever your person, always choosing you 💞';
+    var stickerFooter=document.createElement('div');stickerFooter.className='letter-sticker-footer';
+    stickerFooter.setAttribute('aria-hidden','true');stickerFooter.textContent='💗 🌷 💋 🌼 💌 🐰 💕';
+    var pageNumber=document.createElement('span');pageNumber.className='page-number';
+    pageNumber.setAttribute('aria-hidden','true');pageNumber.textContent='02';
+    content.appendChild(stickers);content.appendChild(eyebrow);content.appendChild(title);
+    content.appendChild(subtitle);content.appendChild(note);content.appendChild(closing);
+    content.appendChild(stickerFooter);content.appendChild(pageNumber);
+    return content;
+  }
+
+  var gifts={flower:renderFlower,letter:renderMessage};
+  function openGift(button){
+    var key=button.getAttribute('data-g');
+    if(!gifts[key])return;
+    last=button;
+    if(slideshowTimer){clearInterval(slideshowTimer);slideshowTimer=null}
+    var body=$('mbody'),giftContent=gifts[key]();
+    body.replaceChildren();body.appendChild(giftContent);
+    slideshowTimer=giftContent._slideshowTimer||null;
+    modal.hidden=false;document.body.style.overflow='hidden';$('close').focus();
+    var rect=button.getBoundingClientRect();hearts(10,rect.left+rect.width/2,rect.top);
+    button.classList.add('done');opened[key]=true;
+    if(Object.keys(opened).length===2)$('final').textContent='All opened! Happy anniversary, love 💖';
+  }
+  function closeGift(){
+    if(slideshowTimer){clearInterval(slideshowTimer);slideshowTimer=null}
+    modal.hidden=true;document.body.style.overflow='';
+    if(last)last.focus();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tile'),function(button){
+    button.addEventListener('click',function(){openGift(button)});
+  });
+  $('close').addEventListener('click',closeGift);
+  modal.addEventListener('click',function(event){if(event.target===modal)closeGift()});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!modal.hidden)closeGift()});
+})();
+</script>
+</body>
+</html>
