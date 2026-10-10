@@ -182,11 +182,12 @@
   no.addEventListener('keydown',function(e){e.preventDefault();dodge(e)});
 
   var favoriteMusic=$('favoriteMusic'),musicToggle=$('musicToggle');
-  if(location.protocol==='file:'){
-    favoriteMusic.src='./public/music/her-favorite-song.mp3';
-  }
   var musicStatus=$('musicStatus');
   musicToggle.addEventListener('click',function(){
+    if(location.protocol==='file:'){
+      musicStatus.textContent='Run npm run dev and open the local Vite URL to play the song.';
+      return;
+    }
     if(favoriteMusic.paused){
       favoriteMusic.play().then(function(){
         musicToggle.textContent='Open Now ❚❚';musicStatus.textContent='Her song is playing 💗';
